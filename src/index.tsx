@@ -7,7 +7,7 @@ import App from './App'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <React.StrictMode>
-        <BrowserRouter basename='/react-boilerplate'>
+        <BrowserRouter basename='/d3'>
             {/* Add basename for github pages*/}
             <App />
         </BrowserRouter>
