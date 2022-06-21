@@ -10,9 +10,9 @@ const Root = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
-    text-align: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-align: center;
 
     box-sizing: border-box !important;
 `
