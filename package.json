@@ -2,7 +2,7 @@
     "name": "d3",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://sortofasian.github.io/d3",
+    "homepage": "https://dev.dimensioncubed.xyz",
     "dependencies": {
         "react": "^18.0.0",
         "react-dom": "^18.0.0",

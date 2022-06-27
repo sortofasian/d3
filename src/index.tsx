@@ -1,15 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <React.StrictMode>
-        <BrowserRouter basename='/d3'>
-            {/* Add basename for github pages*/}
+        {/* <BrowserRouter>
+        Use hashrouter only for github pages routing */}
+        <HashRouter>
             <App />
-        </BrowserRouter>
+        </HashRouter>
+        {/* </BrowserRouter> */}
     </React.StrictMode>
 )
