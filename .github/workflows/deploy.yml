@@ -29,7 +29,7 @@ jobs:
                   yarn run build --if-present
 
             - name: Add CNAME to use custom domain
-              run: echo "resumes.homecrypt.net" > ./build/CNAME
+              run: echo "dev.dimensioncubed.xyz" > ./build/CNAME
 
             - name: Deploy to gh-pages
               uses: peaceiris/actions-gh-pages@v3
