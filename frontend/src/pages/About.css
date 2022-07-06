@@ -475,22 +475,22 @@ button.bg-primary:focus {
 .sec-img1-position {
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .sec-img2-position {
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 .sec-img3-position {
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .sec-img4-position {
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 /*=============== About section end ==================*/
 /*=============== About section end ==================*/

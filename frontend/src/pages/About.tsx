@@ -337,21 +337,21 @@ function About() {
                         <div className='col-lg-4'>
                             <h3>Contact us</h3>
                             <div className='footer-logo'>
-                                <a className='btn btn-social mx-1 c_btn' href='#'>
+                                <div className='btn btn-social mx-1 c_btn'>
                                     <i
                                         className='fab fa-fw fa-facebook-f'
                                         aria-label='facebook'
                                     ></i>
-                                </a>
-                                <a className='btn btn-social mx-1 c_btn' href='#'>
+                                </div>
+                                <div className='btn btn-social mx-1 c_btn'>
                                     <i className='fab fa-fw fa-twitter' aria-label='twitter'></i>
-                                </a>
-                                <a className='btn btn-social mx-1 c_btn' href='#'>
+                                </div>
+                                <div className='btn btn-social mx-1 c_btn'>
                                     <i className='fab fa-fw fa-reddit' aria-label='reddit'></i>
-                                </a>
-                                <a className='btn btn-social mx-1 c_btn' href='#'>
+                                </div>
+                                <div className='btn btn-social mx-1 c_btn'>
                                     <i className='fab fa-fw fa-discord' aria-label='discord'></i>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
