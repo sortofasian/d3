@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Backend",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/backend",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/backend/src/index.ts",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "env": {
+                "NODE_ENV": "dev"
+            }
+        }
+    ]
+}
