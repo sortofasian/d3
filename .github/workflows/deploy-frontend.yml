@@ -14,6 +14,9 @@ jobs:
         strategy:
             matrix:
                 node-version: [17.x]
+        defaults:
+            run:
+                working-directory: ./frontend
 
         steps:
             - uses: actions/checkout@v3
@@ -21,9 +24,6 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
-
-            - name: cd to frontend dir
-              run: cd frontend
 
             - name: Patch index.tsx to use HashRouter for Github Pages support
               run: sed 's/BrowserRouter/HashRouter/' src/index.tsx -i
