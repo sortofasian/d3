@@ -450,8 +450,6 @@ button.bg-primary:focus {
 
 /*=============== About section Start ==================*/
 
-.about-section {
-}
 .about-section h1 {
     font-size: 32px;
     color: #000;
@@ -711,7 +709,6 @@ a.footerlink {
 }
 
 img {
-    user-drag: none !important;
     user-select: none !important;
     -moz-user-select: none !important;
     -webkit-user-drag: none !important;

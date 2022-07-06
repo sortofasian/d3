@@ -34,11 +34,9 @@ jobs:
                   yarn install --frozen-lockfile
                   yarn run build --if-present
 
-            - name: Add CNAME to use custom domain
-              run: echo "dev.dimensioncubed.xyz" > ./build/CNAME
-
             - name: Deploy to gh-pages
               uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./build
+                  cname: dev.dimensioncubed.xyz
+                  publish_dir: ./frontend/build
