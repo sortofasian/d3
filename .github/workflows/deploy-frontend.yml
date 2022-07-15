@@ -30,7 +30,7 @@ jobs:
 
             - name: Build using yarn script
               run: |
-                  rm -rf node_modules
+                  yarn set version stable
                   yarn install --frozen-lockfile
                   yarn run build --if-present
 
