@@ -1,7 +1,6 @@
 import './About.css'
 import './bootstrap.css'
 
-import React from 'react'
 function About() {
     return (
         <>
