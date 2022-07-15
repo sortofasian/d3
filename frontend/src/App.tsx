@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
 
 import About from './pages/About'
-import Inventory from './pages/Inventory'
 import NotFound from './pages/NotFound'
+import Store from './pages/Store'
 
 function App() {
     return (
         <Routes>
             <Route path='/' element={<About />} />
-            <Route path='/inventory' element={<Inventory />} />
+            <Route path='/store' element={<Store />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
     )

@@ -1,0 +1,78 @@
+$default-width: 260px;
+$default-height: 300px;
+$gap: 15px;
+.product {
+    position: relative;
+    width: $default-width;
+    height: $default-height;
+    margin: $gap;
+
+    border-radius: 20px;
+    box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.25);
+}
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.info {
+    position: absolute;
+    margin: 0;
+
+    width: calc($default-width - 40px);
+    height: calc($default-height / 3);
+
+    left: calc(50% - ($default-width - 40px) / 2);
+    bottom: 20px;
+
+    background: rgba(200, 200, 200, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (min-width: ($default-width*2 + $gap*4)) {
+    .wide {
+        width: calc($default-width * 2 + $gap * 2);
+        grid-column-end: span 2;
+    }
+    .large {
+        width: calc($default-width * 2 + $gap * 2);
+        height: calc($default-height * 2 + $gap * 2);
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+    }
+}
+.title {
+    margin: auto;
+    margin-top: 2.5%;
+    width: 80%;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+.button {
+    width: 90%;
+    position: absolute;
+    left: calc(50% - 90% / 2);
+    bottom: 10%;
+    height: 30px;
+
+    border-radius: 10px;
+
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+
+    border: 1px solid transparent;
+    transition: background-color 0.15s ease-out, border 0.15s ease-out;
+    &:hover,
+    &:focus {
+        border: 1px solid grey;
+        outline: none;
+    }
+    &:active {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}

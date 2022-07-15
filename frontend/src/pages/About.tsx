@@ -1,6 +1,8 @@
 import './About.css'
 import './bootstrap.css'
 
+import { Link } from 'react-router-dom'
+
 function About() {
     return (
         <>
@@ -53,6 +55,14 @@ function About() {
                                     >
                                         <span>Services</span>
                                     </a>
+                                </li>
+                                <li className='nav-item mx-0 mx-lg-1'>
+                                    <Link
+                                        to='store'
+                                        className='nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger'
+                                    >
+                                        Store
+                                    </Link>
                                 </li>
                                 <li className='nav-item mx-0 mx-lg-1'>
                                     <a
