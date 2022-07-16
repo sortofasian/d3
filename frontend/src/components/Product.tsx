@@ -1,10 +1,12 @@
 import './Product.scss'
 
 type Props = {
+    setModal: (modalVisible: boolean) => void
+    title: string
+    image: string
     variant?: '1x1' | '2x1' | '2x2'
 }
-
-function Product({ variant }: Props) {
+function Product({ setModal, title, image, variant }: Props) {
     if (!variant) variant = '1x1'
     let size
     switch (variant) {
@@ -17,10 +19,12 @@ function Product({ variant }: Props) {
 
     return (
         <div className={`product${size ? ' ' + size : ''}`}>
-            <img src='/img/dragon.jpg' alt='product' className='image' />
+            <img src={image} alt='product' className='image' />
             <div className='info'>
-                <div className='title'>Absolutely fkn sick dragon thing</div>
-                <button className='button'>Add to Cart</button>
+                <div className='title'>{title}</div>
+                <button className='button' onClick={() => setModal(true)}>
+                    See Options
+                </button>
             </div>
         </div>
     )
