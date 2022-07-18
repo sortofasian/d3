@@ -19,10 +19,10 @@ function Product({ setModal, title, image, variant }: Props) {
 
     return (
         <div className={`product${size ? ' ' + size : ''}`}>
-            <img src={image} alt='product' className='image' />
+            <img src={image} alt='product' className='product-image' />
             <div className='info'>
-                <div className='title'>{title}</div>
-                <button className='button' onClick={() => setModal(true)}>
+                <div className='product-title'>{title}</div>
+                <button className='product-button' onClick={() => setModal(true)}>
                     See Options
                 </button>
             </div>
