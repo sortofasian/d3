@@ -1,11 +1,10 @@
 * {
     box-sizing: border-box !important;
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    user-select: none;
+    font-family: 'Inter' !important;
 }
 
 body {
-    font-family: 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 

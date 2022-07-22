@@ -9,8 +9,8 @@ function Store() {
     const [modalVisible, setModal] = useState(false)
     return (
         <>
-            <Modal visible={modalVisible} setVisible={setModal} />
             <Navbar />
+            <Modal visible={modalVisible} setVisible={setModal} />
             <br />
             <Grid>
                 <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} />
