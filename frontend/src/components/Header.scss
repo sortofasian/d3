@@ -1,0 +1,27 @@
+$height: 66px;
+.header {
+    position: relative;
+}
+.header-title-container {
+    height: $height;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: calc(50% - $height / 2);
+}
+.header-title {
+    overflow: hidden;
+    margin: auto;
+    padding: 0 20px;
+    height: $height;
+    line-height: $height;
+    width: max-content;
+    background: rgba(127, 127, 127, 0.1);
+    font-weight: 600;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+.header-video {
+    width: 100%;
+    background: white;
+}
