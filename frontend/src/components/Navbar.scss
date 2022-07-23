@@ -1,0 +1,30 @@
+.navbar {
+    background: #6297da;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+}
+.navbar-logo {
+    object-fit: cover;
+    width: 260px;
+}
+.navbar-item {
+    padding: 0px 40px;
+}
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    & > a {
+        text-decoration: none;
+        & > * {
+            color: black;
+            font-weight: 700;
+        }
+    }
+}

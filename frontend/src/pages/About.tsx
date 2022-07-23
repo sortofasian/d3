@@ -1,6 +1,3 @@
-import './About.css'
-import './bootstrap.css'
-
 import Navbar from '../components/Navbar'
 
 function About() {
@@ -57,8 +54,8 @@ function About() {
                 </div>
             </section>
 
-            <section id='Services' style={{ background: '#e4e4e5' }} className='sec-padding'>
-                <div id='Services' className='container'>
+            <section id='services' style={{ background: '#e4e4e5' }} className='sec-padding'>
+                <div id='services' className='container'>
                     <div className='row align-items-center'>
                         <div className='col-md-6'>
                             <div className='about-section'>
@@ -126,7 +123,7 @@ function About() {
             </section>
 
             <section id='contact'>
-                <div className='container'>
+                <div id='contact' className='container'>
                     <div className='row'>
                         <div className='col-md-12'>
                             <div className='content'>
