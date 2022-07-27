@@ -1,37 +1,38 @@
 import './Modal.scss'
 
+import { ProductData } from '../pages/Store'
+
+export type ModalStatus = { visible: boolean; details?: ProductData }
 type Props = {
-    visible: boolean
-    setVisible: (modalVisible: boolean) => void
+    status: ModalStatus
+    setStatus: (status: ModalStatus) => void
 }
 
-function Modal({ visible, setVisible }: Props) {
+function Modal({ status, setStatus }: Props) {
     return (
         <div
-            className={`modal-background ${visible ? '' : 'hidden'}`}
-            onClick={() => setVisible(false)}
+            className={`modal-background ${status.visible ? '' : 'hidden'}`}
+            onClick={() => setStatus({ visible: false, details: status.details })}
         >
             <div className='modal' onClick={(e) => e.stopPropagation()}>
-                <button className='modal-close' onClick={() => setVisible(false)}>
+                <button
+                    className='modal-close'
+                    onClick={() => setStatus({ visible: false, details: status.details })}
+                >
                     x
                 </button>
 
-                <img className='image' src='/img/dragon.jpg' alt='product' />
+                <img className='image' src={status.details?.images[0]} alt='product' />
 
                 <div className='info-container'>
                     <div className='description'>
-                        <h2>Crystal Dragon</h2>
-
-                        <p>
-                            3D printed articulated crystal dragon from Cinderwing3D. Printed in a
-                            mix of blue and purple with sparkles.
-                        </p>
+                        <h2>{status.details?.title}</h2>
+                        <p>{status.details?.description}</p>
                     </div>
-
                     <div className='bar' />
-
                     <div className='details'>
-                        <h2 className='price'>$50.00</h2>
+                        <h2 className='price'>{`$${status.details?.price}`}</h2>
+                        <div className='stock'>{status.details?.stock} in stock</div>
 
                         <p>
                             <strong>Width:</strong> 100in (wing to wing)
@@ -45,7 +46,9 @@ function Modal({ visible, setVisible }: Props) {
                             <div>Buy Now</div>
                         </button>
 
-                        <button className='button add-cart'>Add to Cart</button>
+                        <button className='button'>
+                            <div>Add to Cart</div>
+                        </button>
                     </div>
                 </div>
             </div>

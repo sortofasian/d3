@@ -1,12 +1,14 @@
 import './Product.scss'
 
+import { ProductData } from '../pages/Store'
+import { ModalStatus } from './Modal'
+
 type Props = {
-    setModal: (modalVisible: boolean) => void
-    title: string
-    image: string
+    setModalStatus: (status: ModalStatus) => void
+    details: ProductData
     variant?: '1x1' | '2x1' | '2x2'
 }
-function Product({ setModal, title, image, variant }: Props) {
+function Product({ setModalStatus, details, variant }: Props) {
     if (!variant) variant = '1x1'
     let size
     switch (variant) {
@@ -19,10 +21,13 @@ function Product({ setModal, title, image, variant }: Props) {
 
     return (
         <div className={`product${size ? ' ' + size : ''}`}>
-            <img src={image} alt='product' className='product-image' />
+            <img src={details.thumbnail} alt='product' className='product-image' />
             <div className='product-info'>
-                <div className='product-title'>{title}</div>
-                <button className='product-button' onClick={() => setModal(true)}>
+                <div className='product-title'>{details.title}</div>
+                <button
+                    className='product-button'
+                    onClick={() => setModalStatus({ visible: true, details: details })}
+                >
                     See Options
                 </button>
             </div>

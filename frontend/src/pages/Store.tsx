@@ -1,27 +1,55 @@
-import { useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 
-import Modal from '../components/Modal'
+import Modal, { ModalStatus } from '../components/Modal'
 import Navbar from '../components/Navbar'
 import Product from '../components/Product'
 import Grid from '../layouts/Grid'
+const apiUrl = process.env.REACT_APP_API_URL
+
+export type ProductData = {
+    id: number
+    title: string
+    description: string
+    price: number
+    discountPercentage: number
+    rating: number
+    stock: number
+    brand: string
+    category: string
+    thumbnail: string
+    images: Array<string>
+}
 
 function Store() {
-    const [modalVisible, setModal] = useState(false)
+    const [modalStatus, setModalStatus] = useState<ModalStatus>({
+        visible: false
+    })
+    const [products, setProducts] = useState<ReactNode>()
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const productData = (await fetch(`${apiUrl}/products`).then((res) => res.json()))
+                .products as Array<ProductData>
+
+            const productElements: Array<ReactNode> = [<></>]
+            productData.forEach((product: ProductData) => {
+                productElements.push(<Product setModalStatus={setModalStatus} details={product} />)
+            })
+
+            setProducts(productElements)
+        }
+
+        fetchProducts()
+    }, [])
+
+    useEffect(() => console.log(products), [products])
+
     return (
         <>
             <Navbar />
-            <Modal visible={modalVisible} setVisible={setModal} />
+            <Modal status={modalStatus} setStatus={setModalStatus} />
             <br />
-            <Grid>
-                <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} />
-                <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} variant='2x1' />
-                <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} />
-                <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} />
-                <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} variant='2x2' />
-                <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} />
-                <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} />
-                <Product title='Dragon' image='/img/dragon.jpg' setModal={setModal} />
-            </Grid>
+            <Grid>{products}</Grid>
         </>
     )
 }

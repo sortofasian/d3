@@ -34,7 +34,7 @@
     border-radius: 12px;
 }
 .image {
-    object-fit: cover;
+    object-fit: contain;
 
     height: 60%;
     width: 100%;
@@ -49,23 +49,26 @@
     width: 100%;
 }
 .description {
-    width: 300px;
+    height: calc(100% - 40px);
+    width: 50%;
     margin: 20px;
 }
 .bar {
-    height: 90%;
+    height: calc(100% - 40px);
     border: 1px solid black;
     margin: 2% 20px;
 }
 .details {
-    width: 300px;
+    height: calc(100% - 40px);
+    width: 50%;
     margin: 20px;
 }
 .price {
     font-family: 'Roboto Mono', 'monospace' !important;
-    margin-bottom: 20px;
 }
-
+.stock {
+    margin-bottom: 10px;
+}
 .button {
     border-radius: 5px;
     margin-bottom: 10px;
