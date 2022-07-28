@@ -1,11 +1,11 @@
 import './Product.scss'
 
-import { ProductData } from '../pages/Store'
+import { ProductType } from '../pages/Store'
 import { ModalStatus } from './Modal'
 
 type Props = {
     setModalStatus: (status: ModalStatus) => void
-    details: ProductData
+    details: ProductType
     variant?: '1x1' | '2x1' | '2x2'
 }
 function Product({ setModalStatus, details, variant }: Props) {

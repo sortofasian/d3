@@ -1,0 +1,38 @@
+.pagenav {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.pagenav-limit {
+    width: 200px;
+    & > select {
+        margin: 10px;
+    }
+}
+.pagenav-buttons {
+    margin: auto;
+
+    & > * {
+        text-align: center;
+        display: inline-block;
+        font-weight: 600;
+        font-size: medium;
+    }
+    & > button {
+        margin: 10px;
+        height: 30px;
+        width: 80px;
+        border-radius: 5px;
+
+        color: white;
+        background-color: rgb(98, 151, 218);
+    }
+    & > div {
+        color: black;
+        width: 60px;
+    }
+    & > .disabled {
+        background-color: white;
+    }
+}

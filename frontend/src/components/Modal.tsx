@@ -1,9 +1,10 @@
 import './Modal.scss'
 
-import { ProductData } from '../pages/Store'
+import { ProductType } from '../pages/Store'
 
-export type ModalStatus = { visible: boolean; details?: ProductData }
-type Props = {
+//Types
+export type ModalStatus = { visible: boolean; details?: ProductType }
+export type Props = {
     status: ModalStatus
     setStatus: (status: ModalStatus) => void
 }
@@ -12,7 +13,7 @@ function Modal({ status, setStatus }: Props) {
     return (
         <div
             className={`modal-background ${status.visible ? '' : 'hidden'}`}
-            onClick={() => setStatus({ visible: false, details: status.details })}
+            onClick={() => setStatus({ visible: false, details: undefined })}
         >
             <div className='modal' onClick={(e) => e.stopPropagation()}>
                 <button
@@ -31,7 +32,7 @@ function Modal({ status, setStatus }: Props) {
                     </div>
                     <div className='bar' />
                     <div className='details'>
-                        <h2 className='price'>{`$${status.details?.price}`}</h2>
+                        <h2 className='price'>{`$${status.details?.price.toFixed(2)}`}</h2>
                         <div className='stock'>{status.details?.stock} in stock</div>
 
                         <p>

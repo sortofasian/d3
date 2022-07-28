@@ -1,11 +1,10 @@
+import Contact from '../components/Contact'
 import Header from '../components/Header'
-import Navbar from '../components/Navbar'
 import Section from '../layouts/Section'
 
 function About() {
     return (
         <>
-            <Navbar />
             <Header />
 
             <Section id='about'>
@@ -60,118 +59,11 @@ function About() {
             </Section>
 
             <Section id='contact'>
-                <h3 className='heading mb-4'>{"Let's talk about everything!"}</h3>
-                <p>
-                    <img src='img/undraw-contact.svg' alt='Contact' className='img-fluid' />
-                </p>
-                <form className='mb-5' method='post' id='contactForm' name='contactForm'>
-                    <input
-                        type='text'
-                        className='form-control'
-                        name='f name'
-                        id='f name'
-                        placeholder='First name'
-                    />
-                    <input
-                        type='text'
-                        className='form-control'
-                        name='l name'
-                        id='l name'
-                        placeholder='Last name'
-                    />
-                    <input
-                        type='text'
-                        className='form-control'
-                        name='email'
-                        id='email'
-                        placeholder='Email'
-                    />
-                    <input
-                        type='number'
-                        className='form-control'
-                        name='number'
-                        id='number'
-                        placeholder='Phone'
-                    />
-                    <input
-                        type='text'
-                        className='form-control'
-                        name='subject'
-                        id='subject'
-                        placeholder='Subject'
-                    />
-                    <input
-                        type='file'
-                        className='form-control'
-                        name='file'
-                        id='file'
-                        placeholder='Upload File'
-                    />
-                    <textarea
-                        className='form-control'
-                        name='message'
-                        id='message'
-                        cols={30}
-                        rows={7}
-                        placeholder='Write your Comments'
-                    ></textarea>
-                    <input
-                        type='submit'
-                        value='Send Message'
-                        className='btn1 btn-primary rounded-0 py-2 px-4'
-                    />
-                    <span className='submitting'></span>
-                </form>
+                <Contact />
             </Section>
 
-            <footer className='footer text-center'>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col-lg-4 mb-5 mb-lg-0'>
-                            <div className='footer-logo'>
-                                <img
-                                    width='50%'
-                                    src='img/Dimension_Cubed-Roundal_Logo.png'
-                                    alt=''
-                                />
-                            </div>
-                        </div>
-
-                        <div className='col-lg-4 mb-5 mb-lg-0'>
-                            <h3>About us</h3>
-                            <br />
-                        </div>
-
-                        <div className='col-lg-4'>
-                            <h3>Contact us</h3>
-                            <div className='footer-logo'>
-                                <div className='btn btn-social mx-1 c_btn'>
-                                    <i
-                                        className='fab fa-fw fa-facebook-f'
-                                        aria-label='facebook'
-                                    ></i>
-                                </div>
-                                <div className='btn btn-social mx-1 c_btn'>
-                                    <i className='fab fa-fw fa-twitter' aria-label='twitter'></i>
-                                </div>
-                                <div className='btn btn-social mx-1 c_btn'>
-                                    <i className='fab fa-fw fa-reddit' aria-label='reddit'></i>
-                                </div>
-                                <div className='btn btn-social mx-1 c_btn'>
-                                    <i className='fab fa-fw fa-discord' aria-label='discord'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
             <div className='copyright py-4 text-center text-white'>
-                <div className='container'>
-                    <small>
-                        ©Copyright Dimension Cubed | Printing Services 2022. All Right Reserve
-                    </small>
-                </div>
+                <div className='container'></div>
             </div>
         </>
     )
