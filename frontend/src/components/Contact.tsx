@@ -13,7 +13,6 @@ function Contact() {
     const [missing, setMissing] = useState({ name: false, email: false, message: false })
 
     const [loading, setLoading] = useState(false)
-    const [result, setResult] = useState('')
 
     async function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -28,7 +27,7 @@ function Contact() {
 
         setLoading(true)
         try {
-            const result = await fetch(`${apiUrl}/contact`, {
+            await fetch(`${apiUrl}/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name: name, email: email, message: message })
@@ -72,7 +71,11 @@ function Contact() {
                     title='Message'
                     className={`${missing.message ? 'missing' : ''} message`}
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    onChange={(e) => {
+                        setMessage(e.target.value)
+                        e.target.style.height = 'auto'
+                        e.target.style.height = e.target.scrollHeight + 'px'
+                    }}
                 />
             </div>
             {loading ? (
