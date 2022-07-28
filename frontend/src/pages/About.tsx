@@ -55,7 +55,9 @@ function About() {
             </Section>
 
             <Section id='contact' title='Contact'>
-                <Contact></Contact>
+                <ImageTextPair img='img/undraw-contact.svg'>
+                    <Contact />
+                </ImageTextPair>
             </Section>
 
             <div className='copyright py-4 text-center text-white'>

@@ -1,0 +1,79 @@
+.contact {
+    margin: 40px 0;
+    margin-top: 20px;
+    & > div {
+        margin-bottom: 10px;
+        width: 100%;
+        & > label:not(.contact-button) {
+            display: block;
+            font-size: small;
+            position: relative;
+            height: 20px;
+            font-weight: 600;
+            color: #839dc0;
+        }
+        & > input,
+        textarea {
+            width: 100%;
+            height: 30px;
+            display: block;
+            border: 1px solid rgba(0, 0, 0, 0.425);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    }
+}
+.contact-message {
+    & > .message {
+        height: 60px;
+        resize: vertical;
+        max-height: 200px;
+    }
+}
+.contact-button {
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.425);
+    font-weight: 600;
+    font-size: small;
+    border-radius: 5px;
+    text-align: center;
+
+    &.submit {
+        margin-top: 30px;
+        margin-left: auto;
+        background-color: #839dc0;
+        line-height: unset;
+        width: 25%;
+    }
+}
+.contact-loading {
+    height: min-content !important;
+    width: 25% !important;
+    & > svg {
+        display: block;
+        height: 30px;
+        width: 30px;
+        margin: auto;
+    }
+    margin-top: 30px;
+    margin-left: auto;
+    color: #839dc0;
+}
+
+.contact-missing {
+    opacity: 0;
+    font-weight: 100;
+    color: rgb(172, 0, 0);
+    &.missing {
+        opacity: 1;
+        border: none !important;
+    }
+}
+.missing {
+    border: 2px solid red !important;
+}
