@@ -15,22 +15,21 @@
     }
 }
 .footer-connect {
-    & > .icon {
-        background: #111314;
-        height: 36px;
-        width: 36px;
-        padding: 7px;
-        margin: 5px;
-        margin-top: 20px;
-        border-radius: 36px;
-        color: #6297da;
-    }
-
     & > h3 {
         text-align: center;
         color: white;
         font-weight: 600;
     }
+}
+.footer-icon {
+    background: #111314;
+    height: 36px;
+    width: 36px;
+    padding: 7px;
+    margin: 5px;
+    margin-top: 20px;
+    border-radius: 36px;
+    color: #6297da;
 }
 
 .footer-copyright {

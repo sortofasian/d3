@@ -1,10 +1,12 @@
 import './Footer.scss'
 
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faDiscord } from '@fortawesome/free-brands-svg-icons'
-import { faTiktok } from '@fortawesome/free-brands-svg-icons'
-import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import {
+    faFacebookF,
+    faInstagram,
+    faTiktok,
+    faTwitter,
+    faYoutube
+} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function Footer() {
     return (
@@ -16,11 +18,21 @@ function Footer() {
 
                 <div className='footer-connect'>
                     <h3>Connect</h3>
-                    <FontAwesomeIcon className='icon' icon={faFacebookF} />
-                    <FontAwesomeIcon className='icon' icon={faTwitter} />
-                    <FontAwesomeIcon className='icon' icon={faDiscord} />
-                    <FontAwesomeIcon className='icon' icon={faTiktok} />
-                    <FontAwesomeIcon className='icon' icon={faYoutube} />
+                    <a href='https://facebook.com/dimensioncub3d'>
+                        <FontAwesomeIcon className='footer-icon' icon={faFacebookF} />
+                    </a>
+                    <a href='https://twitter.com/DimensionCub3d'>
+                        <FontAwesomeIcon className='footer-icon' icon={faTwitter} />
+                    </a>
+                    <a href='https://www.instagram.com/dimensioncub3d/'>
+                        <FontAwesomeIcon className='footer-icon' icon={faInstagram} />
+                    </a>
+                    <a href='https://www.tiktok.com/@dimensioncub3d'>
+                        <FontAwesomeIcon className='footer-icon' icon={faTiktok} />
+                    </a>
+                    <a href='https://www.youtube.com/channel/UCAnz3XVXXbfTXRo9gmgmiyg'>
+                        <FontAwesomeIcon className='footer-icon' icon={faYoutube} />
+                    </a>
                 </div>
             </div>
 
