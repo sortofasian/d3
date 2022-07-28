@@ -12,6 +12,7 @@ function App() {
             <Navbar
                 pages={[
                     { route: '/#about', label: 'About' },
+                    { route: '/#services', label: 'Services' },
                     { route: '/#contact', label: 'Contact' },
                     { route: '/store', label: 'Store' }
                 ]}
