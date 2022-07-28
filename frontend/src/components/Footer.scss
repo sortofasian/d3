@@ -1,0 +1,43 @@
+.footer-container {
+    height: 200px;
+    background-color: #23282a;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-logo {
+    & > * {
+        width: 98px;
+        height: 100px;
+        object-fit: contain;
+    }
+}
+.footer-connect {
+    & > .icon {
+        background: #111314;
+        height: 36px;
+        width: 36px;
+        padding: 7px;
+        margin: 5px;
+        margin-top: 20px;
+        border-radius: 36px;
+        color: #6297da;
+    }
+
+    & > h3 {
+        text-align: center;
+        color: white;
+        font-weight: 600;
+    }
+}
+
+.footer-copyright {
+    padding: 7px 0;
+    font-size: 12px;
+    text-align: center;
+
+    color: white;
+    background-color: black;
+}
