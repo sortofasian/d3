@@ -4766,8 +4766,10 @@ __metadata:
     cross-env: ^7.0.3
     eslint: ^8.14.0
     eslint-config-prettier: ^8.5.0
+    eslint-config-react-app: ^7.0.1
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.29.4
+    eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-simple-import-sort: ^7.0.0
     prettier: ^2.6.2
     react: ^18.0.0
@@ -5533,7 +5535,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:^4.3.0":
+"eslint-plugin-react-hooks@npm:^4.3.0, eslint-plugin-react-hooks@npm:^4.6.0":
   version: 4.6.0
   resolution: "eslint-plugin-react-hooks@npm:4.6.0"
   peerDependencies:

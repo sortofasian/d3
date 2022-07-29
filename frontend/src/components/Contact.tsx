@@ -51,7 +51,12 @@ function Contact() {
                     className={missing.name ? 'missing' : ''}
                     type='text'
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => {
+                        setName(e.target.value)
+                        const newMissing = { ...missing }
+                        newMissing.name = false
+                        setMissing(newMissing)
+                    }}
                 />
             </div>
 
@@ -61,7 +66,12 @@ function Contact() {
                     className={missing.email ? 'missing' : ''}
                     type='text'
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                        setEmail(e.target.value)
+                        const newMissing = { ...missing }
+                        newMissing.email = false
+                        setMissing(newMissing)
+                    }}
                 />
             </div>
 
@@ -73,6 +83,10 @@ function Contact() {
                     value={message}
                     onChange={(e) => {
                         setMessage(e.target.value)
+                        const newMissing = { ...missing }
+                        newMissing.message = false
+                        setMissing(newMissing)
+
                         e.target.style.height = 'auto'
                         e.target.style.height = e.target.scrollHeight + 'px'
                     }}
